@@ -25,14 +25,14 @@ create_stacked_bar_chart <- function(
   
   # Set default colors if none are provided
   if (is.null(colors)) {
-    colors <- c("goals_in_op_left" = "#FF9999", 
-                "goals_in_op_centre" = "#99CC99", 
-                "goals_in_op_right" = "#9999FF")
+    colors <- c("goals_in_op_left" = "#fc8d59", 
+                "goals_in_op_centre" = "#ffffbf", 
+                "goals_in_op_right" = "#91bfdb")
   }
   
   # Create the plot
   ggplot(data, aes(x = .data[[x_metric]], y = .data[[y_metric]], fill = .data[[fill_metric]])) +
-    geom_bar(stat = "identity") +
+    geom_bar(stat = "identity", color = "black") +  # Added 'color = "black"' for borders
     geom_text(
       aes(label = ifelse(.data[[y_metric]] > 0, .data[[y_metric]], "")),
       position = position_stack(vjust = 0.5), 
@@ -76,8 +76,8 @@ create_heatmap <- function(data, x_metric, y_metric, fill_metric, title = "Heatm
   # Create the heatmap
   ggplot(data, aes(x = .data[[x_metric]], y = .data[[y_metric]], fill = .data[[fill_metric]])) +
     geom_tile(color = "white") +
-    geom_text(aes(label = round(.data[[fill_metric]], 2)), color = "yellow2", fontface = "bold", size = 4) +
-    scale_fill_gradient(low = "lightblue", high = "darkblue", name = "Attacks/Game") +
+    geom_text(aes(label = round(.data[[fill_metric]], 2)), color = "yellow2", fontface = "bold", size = 6) +
+    scale_fill_gradient(low = "#ffeda0", high = "#f03b20", name = "Attacks/Game") +
     scale_x_discrete(
       labels = c("Attacksfromleft" = "Left", "Attacksfromcentre" = "Centre", "Attacksfromright" = "Right")
     ) +

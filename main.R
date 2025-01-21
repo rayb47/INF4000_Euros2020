@@ -98,9 +98,9 @@ create_stacked_bar_chart(
   fill_label = "Open Play Goals from the", 
   title = "Open Play Goals by Top 8 Teams (across Tournament)",
   colors = c(
-    "goals_in_op_left" = "#FF9999", 
-    "goals_in_op_centre" = "#99CC99", 
-    "goals_in_op_right" = "#9999FF"
+    "goals_in_op_left" = "#fc8d59", 
+    "goals_in_op_centre" = "#ffffbf", 
+    "goals_in_op_right" = "#91bfdb"
   )
 )
 # -------------------------------------------------
