@@ -6,7 +6,8 @@ This question is relevant since evaluating the attacking output of football team
 
 ## Composite Visualisation
 
-The created composite visualisation is below,
+![image](https://github.com/user-attachments/assets/fcc73329-68bb-433b-b2b5-17588e42b557)
+
 
 
 ## Code
